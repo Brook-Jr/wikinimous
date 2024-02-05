@@ -1,0 +1,10 @@
+<div class="container mt-5">
+  <div class="vstack gap-2">
+    <% @articles.each do |article| %>
+      <div class="p-1">
+        <h3><%= link_to article.title, article_path(article.id), class: "text-decoration-none"%></h3>
+        <h6><%= article.content %></h6>
+      </div>
+    <% end %>
+  </div>
+</div>
